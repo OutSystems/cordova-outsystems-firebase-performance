@@ -54,16 +54,21 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   if(!utils.checkIfFolderExists(destFilePath)){
+    console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
+
+  console.log("PASSOU O IF 1")  
 
   if (cordovaAbove7) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
     if (utils.checkIfFolderExists(destPath)) {
       var destFilePath = path.join(destPath, fileName);
       if(!utils.checkIfFolderExists(destFilePath)){
+        console.log("ENTROU NO IF 2")
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
+      console.log("PASSOU O IF 2")
     }
   }
       
