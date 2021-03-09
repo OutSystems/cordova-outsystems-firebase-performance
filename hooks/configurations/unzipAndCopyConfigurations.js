@@ -53,13 +53,17 @@ module.exports = function(context) {
   var sourceFilePath = path.join(targetPath, fileName);
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
-  utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+  if(!utils.checkIfFolderExists(destFilePath)){
+    utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+  }
 
   if (cordovaAbove7) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
     if (utils.checkIfFolderExists(destPath)) {
       var destFilePath = path.join(destPath, fileName);
-      utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+      if(!utils.checkIfFolderExists(destFilePath)){
+        utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+      }
     }
   }
       
