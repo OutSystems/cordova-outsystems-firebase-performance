@@ -8,5 +8,7 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## 2021-03-09
+- feature: added ci pipeline (https://outsystemsrd.atlassian.net/browse/RMET-546)
 ## 2021-03-08
 - chore: plugin repository created (https://outsystemsrd.atlassian.net/browse/RMET-546)
