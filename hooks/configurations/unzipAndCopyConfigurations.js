@@ -55,9 +55,24 @@ module.exports = function(context) {
   var sourceFilePath = path.join(targetPath, fileName);
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
+  var androidPath =  "platforms/android/res/raw";
+  var iOSPath = "platforms/ios/" + utils.getAppName(context) + "/Resources";
+
+  var destFilePath2;
+
+  var isAndroid = platform.localeCompare("android");
+  var isIOS = platform.localeCompare("ios");
+
+  if(isAndroid == 0){ //android code
+    destFilePath2 = path.join(context.opts.projectRoot, androidPath);
+  }
+  else if(isIOS == 0){ //iOS code
+    destFilePath2 = path.join(context.opts.projectRoot, iOSPath);
+  }
+
   console.log("PLATFORM: " + platform);
 
-  console.log("IOS FOLDER: " + utils.constants.ios.getSoundDestinationFolder(context));
+  console.log("PATH ISSSSS : " + destFilePath2);
 
   if(!utils.checkIfFolderExists(destFilePath)){
     console.log("DEST_FILE_PATH É:::: " + destFilePath)
