@@ -74,6 +74,7 @@ module.exports = function(context) {
 
   console.log("PATH ISSSSS : " + destFilePath2);
 
+  //this is to delete
   if(!utils.checkIfFolderExists(destFilePath)){
     console.log("DEST_FILE_PATH É:::: " + destFilePath)
     console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
@@ -82,6 +83,10 @@ module.exports = function(context) {
     console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
+
+  utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath2);
+
+
 
   console.log("PATH DO IOS É: platforms/ios/" + utils2.getAppName(context) + "/Resources");
 
