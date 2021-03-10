@@ -5,7 +5,7 @@ var AdmZip = require("adm-zip");
 
 var utils = require("./utilities");
 
-var utils2 = require("../utilities");
+var utilsApp = require("../utilities");
 
 var constants = {
   googleServices: "google-services"
@@ -56,7 +56,7 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   var androidPath =  "platforms/android/app";
-  var iOSPath = "platforms/ios/" + utils2.getAppName(context) + "/Resources";
+  var iOSPath = "platforms/ios/" + utilsApp.getAppName(context) + "/Resources";
 
   var completeFilePath;
 
