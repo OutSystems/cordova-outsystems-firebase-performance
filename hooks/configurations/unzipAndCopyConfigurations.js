@@ -5,6 +5,8 @@ var AdmZip = require("adm-zip");
 
 var utils = require("./utilities");
 
+var utils2 = require("../utilities");
+
 var constants = {
   googleServices: "google-services"
 };
@@ -61,6 +63,8 @@ module.exports = function(context) {
     console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
+
+  console.log("PATH DO IOS É: platforms/ios/" + utils2.getAppName(context) + "/Resources");
 
   console.log("PASSOU O IF 1")  
 
