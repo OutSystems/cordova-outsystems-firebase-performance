@@ -68,6 +68,8 @@ module.exports = function(context) {
 
   console.log("PASSOU O IF 1")  
 
+  console.log("ROOT É: " + context.opts.projectRoot);
+
   if (cordovaAbove7) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
     console.log("ENTROU CORDOVA ABOVE 7")
