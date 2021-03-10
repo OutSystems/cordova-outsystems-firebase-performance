@@ -48,7 +48,7 @@
             <string>$PERFORMANCE_MONITORING_ENABLED</string>
      </config-file>
 
-    <resource-file src="GoogleService-Info.plist" target="./GoogleService-Info.plist" />
+    <!--<resource-file src="GoogleService-Info.plist" target="./GoogleService-Info.plist" />-->
 
     <source-file src="src/ios/OSFirebasePerformance.m"/>
     <header-file src="src/ios/OSFirebasePerformance.h"/>

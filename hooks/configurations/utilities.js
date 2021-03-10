@@ -22,6 +22,7 @@ var constants = {
     firebaseFileExtension: ".plist",
     soundFileName: "push_sound.caf",
     getSoundDestinationFolder: function(context) {
+      console.log("PATH DO IOS É: platforms/ios/" + utils.getAppName(context) + "/Resources");
       return "platforms/ios/" + utils.getAppName(context) + "/Resources";
     }
   },
