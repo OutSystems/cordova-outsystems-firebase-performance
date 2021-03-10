@@ -57,6 +57,7 @@ module.exports = function(context) {
     console.log("DEST_FILE_PATH É:::: " + destFilePath)
     console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
     console.log("TARGET_PATH É:::: " + targetPath)
+    console.log("DEFER É::: " + defer)
     console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }

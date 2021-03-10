@@ -29,7 +29,7 @@
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <meta-data android:name="firebase_performance_collection_enabled" android:value="$PERFORMANCE_MONITORING_ENABLED" />
     </config-file>
-    
+
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
 
     <framework src="com.google.firebase:firebase-perf:19.1.1" />
