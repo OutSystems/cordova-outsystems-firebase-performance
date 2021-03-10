@@ -55,7 +55,7 @@ module.exports = function(context) {
   var sourceFilePath = path.join(targetPath, fileName);
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
-  var androidPath =  "platforms/android/res/raw";
+  var androidPath =  "platforms/android/app";
   var iOSPath = "platforms/ios/" + utils2.getAppName(context) + "/Resources";
 
   var completeFilePath;
@@ -80,7 +80,7 @@ module.exports = function(context) {
 
   //copying the config file to the correct destination folder
   if(!utils.checkIfFolderExists(destFilePathFinal)){
-    //utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
+    utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
   }
 
   if (cordovaAbove7) {
