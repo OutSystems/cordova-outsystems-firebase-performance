@@ -85,10 +85,9 @@ module.exports = function(context) {
   }
 
   if (cordovaAbove7) {
-    var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
-    if (utils.checkIfFolderExists(destPath)) {
+    if (utils.checkIfFolderExists(completeFilePath)) {
       console.log("entrou na folder")
-      var destFilePath = path.join(destPath, fileName);
+      var destFilePath = path.join(completeFilePath, fileName);
       console.log("FINAL DEST PATH 2 IS: " + destPath);
       if(!utils.checkIfFolderExists(destFilePath)){
         console.log("entrou no if")
