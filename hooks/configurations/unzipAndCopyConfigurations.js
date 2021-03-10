@@ -86,7 +86,7 @@ module.exports = function(context) {
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
 
-  utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath2);
+  utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
 
 
 
