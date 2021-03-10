@@ -76,11 +76,8 @@ module.exports = function(context) {
 
   if (cordovaAbove7) {
     if (utils.checkIfFolderExists(completeFilePath)) {
-      console.log("entrou na folder")
       var destFilePath = path.join(completeFilePath, fileName);
-      console.log("FINAL DEST PATH 2 IS: " + destFilePath);
       if(!utils.checkIfFolderExists(destFilePath)){
-        console.log("entrou no if")
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
     }
