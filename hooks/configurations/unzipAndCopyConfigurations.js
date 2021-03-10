@@ -55,6 +55,8 @@ module.exports = function(context) {
   var sourceFilePath = path.join(targetPath, fileName);
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
+  console.log("PLATFORM: " + platform);
+
   if(!utils.checkIfFolderExists(destFilePath)){
     console.log("DEST_FILE_PATH É:::: " + destFilePath)
     console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
