@@ -70,6 +70,8 @@ module.exports = function(context) {
     destFilePath2 = path.join(context.opts.projectRoot, iOSPath);
   }
 
+  var destFilePathFinal = path.join(destFilePath2, fileName);
+
   console.log("PLATFORM: " + platform);
 
   console.log("PATH ISSSSS : " + destFilePath2);
