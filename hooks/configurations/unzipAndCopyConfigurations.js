@@ -80,6 +80,7 @@ module.exports = function(context) {
 
   //copying the config file to the correct destination folder
   if(!utils.checkIfFolderExists(destFilePathFinal)){
+    console.log("entrou no if")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
   }
 
