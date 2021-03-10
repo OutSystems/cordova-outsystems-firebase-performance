@@ -71,6 +71,7 @@ module.exports = function(context) {
   }
 
   var destFilePathFinal = path.join(completeFilePath, fileName);
+  console.log("FINAL DEST PATH IS: " + destFilePathFinal);
 
   //probably to delete because the destFilePath is not the correct place for the file
   if(!utils.checkIfFolderExists(destFilePath)){
@@ -79,7 +80,7 @@ module.exports = function(context) {
 
   //copying the config file to the correct destination folder
   if(!utils.checkIfFolderExists(destFilePathFinal)){
-    utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
+    //utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
   }
 
   if (cordovaAbove7) {
