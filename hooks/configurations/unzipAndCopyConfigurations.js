@@ -58,53 +58,39 @@ module.exports = function(context) {
   var androidPath =  "platforms/android/res/raw";
   var iOSPath = "platforms/ios/" + utils2.getAppName(context) + "/Resources";
 
-  var destFilePath2;
+  var completeFilePath;
 
   var isAndroid = platform.localeCompare("android");
   var isIOS = platform.localeCompare("ios");
 
   if(isAndroid == 0){ //android code
-    destFilePath2 = path.join(context.opts.projectRoot, androidPath);
+    completeFilePath = path.join(context.opts.projectRoot, androidPath);
   }
   else if(isIOS == 0){ //iOS code
-    destFilePath2 = path.join(context.opts.projectRoot, iOSPath);
+    completeFilePath = path.join(context.opts.projectRoot, iOSPath);
   }
 
-  var destFilePathFinal = path.join(destFilePath2, fileName);
+  var destFilePathFinal = path.join(completeFilePath, fileName);
 
-  console.log("PLATFORM: " + platform);
-
-  console.log("PATH ISSSSS : " + destFilePath2);
-
-  //this is to delete
+  //probably to delete because the destFilePath is not the correct place for the file
   if(!utils.checkIfFolderExists(destFilePath)){
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
 
+  //copying the config file to the correct destination folder
   if(!utils.checkIfFolderExists(destFilePathFinal)){
-    console.log("Entrou no if 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
   }
 
-  console.log("Passou no if 1")
-  
-
-  console.log("ROOT É: " + context.opts.projectRoot);
-
   if (cordovaAbove7) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
-    console.log("ENTROU CORDOVA ABOVE 7")
     if (utils.checkIfFolderExists(destPath)) {
       var destFilePath = path.join(destPath, fileName);
       if(!utils.checkIfFolderExists(destFilePath)){
-        console.log("ENTROU NO IF 2")
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
-      console.log("PASSOU O IF 2")
     }
   }
-
-  console.log("PASSOU O CORDOVA 7")
       
   return defer.promise;
 }
