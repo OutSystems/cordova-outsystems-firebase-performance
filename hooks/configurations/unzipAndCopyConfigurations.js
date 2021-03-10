@@ -57,6 +57,8 @@ module.exports = function(context) {
 
   console.log("PLATFORM: " + platform);
 
+  console.log("IOS FOLDER: " + utils.constants.ios.getSoundDestinationFolder(context));
+
   if(!utils.checkIfFolderExists(destFilePath)){
     console.log("DEST_FILE_PATH É:::: " + destFilePath)
     console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
