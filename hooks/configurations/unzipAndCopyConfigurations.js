@@ -78,21 +78,16 @@ module.exports = function(context) {
 
   //this is to delete
   if(!utils.checkIfFolderExists(destFilePath)){
-    console.log("DEST_FILE_PATH É:::: " + destFilePath)
-    console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
-    console.log("TARGET_PATH É:::: " + targetPath)
-    console.log("DEFER É::: " + defer)
-    console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
 
-  utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
+  if(!utils.checkIfFolderExists(destFilePathFinal)){
+    console.log("Entrou no if 1")
+    utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePathFinal);
+  }
 
-
-
-  console.log("PATH DO IOS É: platforms/ios/" + utils2.getAppName(context) + "/Resources");
-
-  console.log("PASSOU O IF 1")  
+  console.log("Passou no if 1")
+  
 
   console.log("ROOT É: " + context.opts.projectRoot);
 
