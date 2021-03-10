@@ -54,7 +54,8 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   if(!utils.checkIfFolderExists(destFilePath)){
-    console.log("PATH É:::: " + destFilePath)
+    console.log("DEST_FILE_PATH É:::: " + destFilePath)
+    console.log("SOURCE_FILE_PATH É:::: " + sourceFilePath)
     console.log("ENTROU NO IF 1")
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
