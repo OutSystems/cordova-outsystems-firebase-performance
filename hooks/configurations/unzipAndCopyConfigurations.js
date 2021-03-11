@@ -56,7 +56,7 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   var androidPath =  "platforms/android/app";
-  var iOSPath = "platforms/ios/" + utilsApp.getAppName(context) + "/Resources";
+  var iOSPath = "platforms/ios/" + utilsApp.getAppName(context);
 
   var completeFilePath;
 
