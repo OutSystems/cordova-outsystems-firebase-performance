@@ -34,6 +34,28 @@ class OSFirebasePerformance : CDVPlugin {
     
     @objc(addTraceAttribute:)
     func addTraceAttribute(command: CDVInvokedUrlCommand) {
+        let traceName = command.arguments[0] as? String ?? ""
+        let attributeName = command.arguments[1] as? String ?? ""
+        let value = command.arguments[2] as? String ?? ""
+        
+        if !traceName.isEmpty && !attributeName.isEmpty && !value.isEmpty {
+            if let trace = traces[traceName] {
+                (trace as? Trace)?.setValue(attributeName, forAttribute: value)
+
+            }
+        }
+    }
+    
+    @objc(removeAttribute:)
+    func removeAttribute(command: CDVInvokedUrlCommand) {
+        let traceName = command.arguments[0] as? String ?? ""
+        let attributeName = command.arguments[1] as? String ?? ""
+        
+        if !traceName.isEmpty && !attributeName.isEmpty {
+            if let trace = traces[traceName] {
+                (trace as? Trace)?.removeAttribute(attributeName)
+            }
+        }
     }
     
     @objc(incrementMetric:)
