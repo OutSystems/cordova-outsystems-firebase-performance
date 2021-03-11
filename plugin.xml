@@ -45,6 +45,7 @@
         <param name="onload" value="$PERFORMANCE_MONITORING_ENABLED" />
       </feature>
     </config-file>
+    <dependency url="https://github.com/agoncalvesos/cordova-plugin-add-swift-support" commit="513e43f94ae94ad609d49f24e7dca23a4c358095" id="cordova-plugin-add-swift-support"/>
 
      <config-file target="*-Info.plist" parent="FIREBASE_PERFORMANCE_COLLECTION_ENABLED">
             <string>$PERFORMANCE_MONITORING_ENABLED</string>
