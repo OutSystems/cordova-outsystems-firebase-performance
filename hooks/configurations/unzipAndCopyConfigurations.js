@@ -56,7 +56,7 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   var androidPath =  "platforms/android/app";
-  var iOSPath = "platforms/ios/";
+  var iOSPath = "platforms/ios/app";
 
   var completeFilePath;
 
@@ -76,11 +76,13 @@ module.exports = function(context) {
 
   if (cordovaAbove7) {
     if (utils.checkIfFolderExists(completeFilePath)) {
+      console.log("FOLDER EXISTE")
       var destFilePath = path.join(completeFilePath, fileName);
       if(!utils.checkIfFolderExists(destFilePath)){
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
     }
+    console.log("PASSOU O IF");
   }
       
   return defer.promise;
