@@ -56,7 +56,7 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   var androidPath =  "platforms/android/app";
-  var iOSPath = "platforms/ios/app";
+  var iOSPath = "platforms/ios/" + utilsApp.getAppName(context) + "/Resources";
 
   var completeFilePath;
 
@@ -75,13 +75,14 @@ module.exports = function(context) {
   }
 
   if (cordovaAbove7) {
-    if (utils.checkIfFolderExists(completeFilePath)) {
-      console.log("FOLDER EXISTE")
+    //if (utils.checkIfFolderExists(completeFilePath)) {
+      utils.createOrCheckIfFolderExists(completeFilePath);
       var destFilePath = path.join(completeFilePath, fileName);
       if(!utils.checkIfFolderExists(destFilePath)){
+        console.log("FICHEIRO AINDA NAO EXISTE, VAI SER CRIADO");
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
-    }
+    //}
     console.log("PASSOU O IF");
   }
       

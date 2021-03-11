@@ -45,6 +45,7 @@ function getFilesFromPath(path) {
 
 function createOrCheckIfFolderExists(path) {
   if (!fs.existsSync(path)) {
+    console.log("A FOLDER NAO EXISTE");
     fs.mkdirSync(path);
   }
 }
