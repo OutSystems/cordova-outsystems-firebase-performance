@@ -8,5 +8,8 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## 2021-03-11
+- feature: added dependencies to firebase and analytics plugin (https://outsystemsrd.atlassian.net/browse/RMET-547)
+
 ## 2021-03-08
 - chore: plugin repository created (https://outsystemsrd.atlassian.net/browse/RMET-546)
