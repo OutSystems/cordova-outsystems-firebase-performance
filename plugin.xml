@@ -9,6 +9,8 @@
     <clobbers target="cordova.plugins.OSFirebasePerformance"/>
   </js-module>
 
+  <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#fix/RMET-547/configurations-hook"/>
+
   <preference name="PERFORMANCE_MONITORING_ENABLED" default="true" />
   
   <hook type="before_plugin_install" src="hooks/configurations/installDependencies.js" />
