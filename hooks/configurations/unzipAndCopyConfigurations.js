@@ -75,11 +75,10 @@ module.exports = function(context) {
   }
 
   if (cordovaAbove7) {
-    if (utils.createOrCheckIfFolderExists(completeFilePath)) {
-      var destFilePath = path.join(completeFilePath, fileName);
-      if(!utils.checkIfFolderExists(destFilePath)){
-        utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
-      }
+    utils.createOrCheckIfFolderExists(completeFilePath) 
+    var destFilePath = path.join(completeFilePath, fileName);
+    if(!utils.checkIfFolderExists(destFilePath)){
+      utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
     }
   }
       
