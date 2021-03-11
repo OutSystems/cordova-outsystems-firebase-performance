@@ -56,7 +56,7 @@ module.exports = function(context) {
   var destFilePath = path.join(context.opts.plugin.dir, fileName);
 
   var androidPath =  "platforms/android/app";
-  var iOSPath = "platforms/ios/" + utilsApp.getAppName(context);
+  var iOSPath = "platforms/ios/";
 
   var completeFilePath;
 
@@ -75,10 +75,11 @@ module.exports = function(context) {
   }
 
   if (cordovaAbove7) {
-    utils.createOrCheckIfFolderExists(completeFilePath) 
-    var destFilePath = path.join(completeFilePath, fileName);
-    if(!utils.checkIfFolderExists(destFilePath)){
-      utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+    if (utils.checkIfFolderExists(completeFilePath)) {
+      var destFilePath = path.join(completeFilePath, fileName);
+      if(!utils.checkIfFolderExists(destFilePath)){
+        utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
+      }
     }
   }
       
