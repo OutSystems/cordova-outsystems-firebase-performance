@@ -61,7 +61,7 @@ public class OSFirebasePerformance extends CordovaPlugin {
         try {
             traceName = args.getString(0);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("StartTrace", e.toString());
             return;
         }
         if(!traceName.isEmpty()){
@@ -81,7 +81,7 @@ public class OSFirebasePerformance extends CordovaPlugin {
         try {
             traceName = args.getString(0);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("StopTrace", e.toString());
             return;
         }
         Trace trace = traces.get(traceName);
@@ -98,7 +98,7 @@ public class OSFirebasePerformance extends CordovaPlugin {
             attributeName = args.getString(1);
             value = args.getString(2);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("AddTraceAttribute", e.toString());
             return;
         }
         if(!traceName.isEmpty() && !attributeName.isEmpty() && !value.isEmpty()){
@@ -117,7 +117,7 @@ public class OSFirebasePerformance extends CordovaPlugin {
             traceName = args.getString(0);
             attributeName = args.getString(1);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("RemoveTraceAttribute", e.toString());
             return;
         }
         if(!traceName.isEmpty() && !attributeName.isEmpty()){
@@ -137,7 +137,7 @@ public class OSFirebasePerformance extends CordovaPlugin {
             metricName = args.getString(1);
             value = args.getLong(2);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("IncrementMetric", e.toString());
             return;
         }
         Trace trace = traces.get(traceName);
@@ -149,21 +149,10 @@ public class OSFirebasePerformance extends CordovaPlugin {
         try {
             enabled = args.getBoolean(0);
         } catch (JSONException e) {
-            callbackContext.error(buildErrorResponse(1, "Invalid arguments"));
+            Log.e("SetEnabled", e.toString());
             return;
         }
         FirebasePerformance.getInstance().setPerformanceCollectionEnabled(enabled);
-    }
-
-    private JSONObject buildErrorResponse(int errorCode, String errorMessage) {
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("code", errorCode);
-            jsonObject.put("message", errorMessage);
-        } catch (JSONException e) {
-            Log.e("FileViewer", e.toString());
-        }
-        return jsonObject;
     }
 
 }
