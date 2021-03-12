@@ -17,6 +17,11 @@ module.exports = {
             exec(resolve, reject, PLUGIN_NAME, "addTraceAttribute", [traceName, attribute, value]);
         });
     },
+    removeTraceAttribute: function (traceName, attribute) {
+        return new Promise(function (resolve, reject) {
+            exec(resolve, reject, PLUGIN_NAME, "removeTraceAttribute", [traceName, attribute]);
+        });
+    },
     incrementMetric: function (traceName, metricName, value) {
         return new Promise(function (resolve, reject) {
             exec(resolve, reject, PLUGIN_NAME, "incrementMetric", [traceName, metricName, value]);
