@@ -53,8 +53,7 @@
 
     <!--<resource-file src="GoogleService-Info.plist" target="./GoogleService-Info.plist" />-->
 
-    <source-file src="src/ios/OSFirebasePerformance.m"/>
-    <header-file src="src/ios/OSFirebasePerformance.h"/>
+    <source-file src="src/ios/OSFirebasePerformance.swift"/>
 
     <framework src="Firebase/Performance" type="podspec" spec="~> 7.0.0"/>
   </platform>
