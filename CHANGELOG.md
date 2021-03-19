@@ -8,6 +8,9 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## 2021-03-18
+- feature: added pipelines configuration (https://outsystemsrd.atlassian.net/browse/RMET-437)
+
 ## 2021-03-15
 - feature: added android and iOS native implementation (https://outsystemsrd.atlassian.net/browse/RMET-547)
 

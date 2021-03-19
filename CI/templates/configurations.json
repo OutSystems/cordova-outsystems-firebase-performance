@@ -5,13 +5,14 @@
         "FirebaseSampleApp"
     ],
     "testPipelineArgs": {
-        "plugin": "<--- Insert plugin name as it is in UI Test pipeline Variable --->",
-        "threads": "3"
+        "plugin": "firebase",
+        "threads": "2",
+        "tags": "@FirebasePerformance"
     },
     "sauceLabsInfo": {
-        "OSFirebasePerformanceSampleApp": {
-            "androidAPIKey": "<--- Insert android sauce labs key here --->",
-            "iosAPIKey": "<--- Insert ios sauce labs key here --->"
+        "FirebaseSampleApp": {
+            "androidAPIKey": "99E7D793424F45ECA9CF7125616DF46B",
+            "iosAPIKey": "FFCB2BDC770D4572B89B2DE7C99F3498"
         }
     }
 }
