@@ -10,6 +10,10 @@ The changes documented here do not include those from the original repository.
 
 ## 2021-03-18
 - feature: added pipelines configuration (https://outsystemsrd.atlassian.net/browse/RMET-437)
+
+## 2021-03-15
+- feature: added android and iOS native implementation (https://outsystemsrd.atlassian.net/browse/RMET-547)
+
 ## 2021-03-11
 - feature: added dependencies to firebase and analytics plugin (https://outsystemsrd.atlassian.net/browse/RMET-547)
 
