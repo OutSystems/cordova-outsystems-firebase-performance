@@ -42,7 +42,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function executePipeline(appID, plugin, platformVersion, azureProject, pipelineId, token, dataCenter, threads) {
+async function executePipeline(appID, plugin, platformVersion, azureProject, pipelineId, token, dataCenter, threads, tags) {
     const FAILED = 8;
     const orgUrl = 'https://dev.azure.com/OutSystemsRD'
     const authHandler = azdev.getPersonalAccessTokenHandler(token);
@@ -57,7 +57,7 @@ async function executePipeline(appID, plugin, platformVersion, azureProject, pip
             "MABS": "latest",
             "PLUGIN_NAME": plugin,
             "RETRY": "1",
-            "TAGS": " ",
+            "TAGS": tags,
             "TEST_TYPE": "native",
             "THREADS": threads,
             "TYPE_OF_DEVICE": "real",
@@ -98,5 +98,5 @@ var json = JSON.parse(jsonString);
 json.forEach(function(run) {
     var pipelineID = run.platform == 'android' ? process.env.npm_config_androidPipelineID : process.env.npm_config_iosPipelineID;
     var deviceVersion = run.platform == 'android' ? process.env.npm_config_deviceAndroid : process.env.npm_config_deviceIos;
-    executePipeline(run.appID, testPipelineArgs.plugin, deviceVersion, azureProjectID, pipelineID, personalToken, dataCenter, threads);
+    executePipeline(run.appID, testPipelineArgs.plugin, deviceVersion, azureProjectID, pipelineID, personalToken, dataCenter, threads, testPipelineArgs.tags);
 });

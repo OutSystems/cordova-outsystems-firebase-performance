@@ -5,8 +5,9 @@
         "FirebaseSampleApp"
     ],
     "testPipelineArgs": {
-        "plugin": "firebase-performance",
-        "threads": "2"
+        "plugin": "firebase",
+        "threads": "2",
+        "tags": "@FirebasePerformance"
     },
     "sauceLabsInfo": {
         "FirebaseSampleApp": {
