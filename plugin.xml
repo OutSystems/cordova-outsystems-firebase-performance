@@ -9,7 +9,7 @@
     <clobbers target="cordova.plugins.OSFirebasePerformance"/>
   </js-module>
 
-  <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#outsystems"/>
+  <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#fix/remove-hook-unzipAndCopy"/>
 
   <preference name="PERFORMANCE_MONITORING_ENABLED" default="true" />
   
