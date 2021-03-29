@@ -57,7 +57,6 @@ module.exports = function(context) {
     utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
   }
 
-  /* I believe this is not necessary, because the files are already copied to the correct folder in the line above, so comment
   if (cordovaAbove7) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
     if (utils.checkIfFolderExists(destPath)) {
@@ -67,7 +66,6 @@ module.exports = function(context) {
       }
     }
   }
-  */
       
   return defer.promise;
 }
