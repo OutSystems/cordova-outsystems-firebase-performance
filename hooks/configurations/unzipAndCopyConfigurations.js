@@ -61,7 +61,7 @@ module.exports = function(context) {
     var destPath = path.join(context.opts.projectRoot, "platforms", platform, "app");
     if (utils.checkIfFolderExists(destPath)) {
       var destFilePath = path.join(destPath, fileName);
-      if(!utils.checkIfFolderExists(destPath)){
+      if(!utils.checkIfFolderExists(destFilePath)){
         utils.copyFromSourceToDestPath(defer, sourceFilePath, destFilePath);
       }
     }
