@@ -28,11 +28,11 @@ class OSFirebasePerformance : CDVPlugin {
         plugin.addTraceAttribute(traceName: traceName, attributeName: attributeName, value: value)
     }
 
-    @objc(removeAttribute:)
-    func removeAttribute(command: CDVInvokedUrlCommand) {
+    @objc(removeTraceAttribute:)
+    func removeTraceAttribute(command: CDVInvokedUrlCommand) {
         let traceName = command.arguments[0] as? String ?? ""
         let attributeName = command.arguments[1] as? String ?? ""
-        plugin.removeAttribute(traceName: traceName, attributeName: attributeName)
+        plugin.removeTraceAttribute(traceName: traceName, attributeName: attributeName)
     }
 
     @objc(incrementMetric:)

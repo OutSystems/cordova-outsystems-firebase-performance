@@ -8,6 +8,11 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## 2021-04-05
+- Fix: removeTraceAttribute renamed
+## 2021-03-29
+- Fix: Fixed hook unzipAndCopyConfigurations
+
 ## 2021-03-18
 - feature: added pipelines configuration (https://outsystemsrd.atlassian.net/browse/RMET-437)
 

@@ -41,7 +41,7 @@ class FirebasePerformancePlugin {
         }
     }
     
-    func removeAttribute(traceName: String, attributeName: String) {
+    func removeTraceAttribute(traceName: String, attributeName: String) {
         if !traceName.isEmpty && !attributeName.isEmpty {
             if let trace = traces[traceName] {
                 trace.removeAttribute(attributeName)
