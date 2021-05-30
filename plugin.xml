@@ -9,12 +9,13 @@
     <clobbers target="cordova.plugins.OSFirebasePerformance"/>
   </js-module>
 
+  <dependency id="cordova-outsystems-FirebaseCore" url="https://github.com/andregrillo/cordova-outsystems-FirebaseCore.git"/>
   <!-- <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#outsystems"/> -->
 
   <preference name="PERFORMANCE_MONITORING_ENABLED" default="true" />
   
-  <hook type="before_plugin_install" src="hooks/configurations/installDependencies.js" />
-  <hook type="before_plugin_install" src="hooks/configurations/unzipAndCopyConfigurations.js" />
+  <!-- <hook type="before_plugin_install" src="hooks/configurations/installDependencies.js" />
+  <hook type="before_plugin_install" src="hooks/configurations/unzipAndCopyConfigurations.js" /> -->
 
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
