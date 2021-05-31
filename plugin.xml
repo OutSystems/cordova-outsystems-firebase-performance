@@ -9,7 +9,7 @@
     <clobbers target="cordova.plugins.OSFirebasePerformance"/>
   </js-module>
 
-  <dependency id="cordova-outsystems-FirebaseCore" url="git@github.com:OutSystems/cordova-outsystems-firebase-core.git"/>
+  <dependency id="cordova-outsystems-FirebaseCore" url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git"/>
 
   <preference name="PERFORMANCE_MONITORING_ENABLED" default="true" />
   
