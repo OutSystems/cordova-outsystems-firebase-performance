@@ -56,7 +56,6 @@ async function executePipeline(appID, plugin, platformVersion, azureProject, pip
             "DEVICE_VERSION": platformVersion,
             "MABS": "latest",
             "PLUGIN_NAME": plugin,
-            "RETRY": "1",
             "TAGS": tags,
             "TEST_TYPE": "native",
             "THREADS": threads,
