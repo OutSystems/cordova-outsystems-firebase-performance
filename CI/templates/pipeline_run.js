@@ -56,7 +56,6 @@ async function executePipeline(appID, plugin, platformVersion, azureProject, pip
             "DEVICE_VERSION": platformVersion,
             "MABS": "latest",
             "PLUGIN_NAME": plugin,
-            "RETRY": "1",
             "TAGS": tags,
             "TEST_TYPE": "native",
             "THREADS": threads,
@@ -98,5 +97,5 @@ var json = JSON.parse(jsonString);
 json.forEach(function(run) {
     var pipelineID = run.platform == 'android' ? process.env.npm_config_androidPipelineID : process.env.npm_config_iosPipelineID;
     var deviceVersion = run.platform == 'android' ? process.env.npm_config_deviceAndroid : process.env.npm_config_deviceIos;
-    executePipeline(run.appID, testPipelineArgs.plugin, deviceVersion, azureProjectID, pipelineID, personalToken, dataCenter, threads, testPipelineArgs.tags);
+    executePipeline(run.storageID, testPipelineArgs.plugin, deviceVersion, azureProjectID, pipelineID, personalToken, dataCenter, threads, testPipelineArgs.tags);
 });
