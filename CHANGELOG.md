@@ -8,8 +8,16 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## [1.0.1]
+
+## 2021-07-22
+- Added the Firebase Core dependency to install config files [RMET-695](https://outsystemsrd.atlassian.net/browse/RMET-695)
+
 ## 2021-07-13
 - Migrating package upload to newer Saucelabs API [RMET-761](https://outsystemsrd.atlassian.net/browse/RMET-761)
+
+## [1.0.0]
+
 ## 2021-04-05
 - Fix: removeTraceAttribute renamed
 ## 2021-03-29
