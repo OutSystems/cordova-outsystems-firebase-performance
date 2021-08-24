@@ -31,7 +31,7 @@
 
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
 
-    <framework src="com.google.firebase:firebase-perf:19.1.1" />
+    <framework src="com.google.firebase:firebase-perf:20.0.+" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
   </platform>
   
@@ -52,6 +52,11 @@
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
 
-    <framework src="Firebase/Performance" type="podspec" spec="~> 8.6.0"/>
+    <podspec>
+      <pods>
+        <pod name="Firebase/Performance" spec="~> 8.6.0" />
+      </pods>
+    </podspec>
+    
   </platform>
 </plugin>
