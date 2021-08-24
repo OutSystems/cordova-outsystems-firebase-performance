@@ -37,7 +37,7 @@
   
   <platform name="ios">
 
-    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.4.0"/>
+    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.6.0"/>
 
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
