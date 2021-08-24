@@ -36,6 +36,9 @@
   </platform>
   
   <platform name="ios">
+
+    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.4.0"/>
+
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
         <param name="ios-package" value="OSFirebasePerformance"/>
@@ -53,10 +56,12 @@
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
 
     <podspec>
-      <pods>
-        <pod name="Firebase/Performance" spec="~> 8.6.0" />
-      </pods>
+        <config>
+            <source url="https://cdn.cocoapods.org/" />
+        </config>
+        <pods>
+            <pod name="Firebase/Performance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" />
+        </pods>
     </podspec>
-    
   </platform>
 </plugin>
