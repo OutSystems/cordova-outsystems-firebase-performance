@@ -31,11 +31,14 @@
 
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
 
-    <framework src="com.google.firebase:firebase-perf:19.1.1" />
+    <framework src="com.google.firebase:firebase-perf:20.0.+" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
   </platform>
   
   <platform name="ios">
+
+    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.6.0"/>
+
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
         <param name="ios-package" value="OSFirebasePerformance"/>
@@ -52,6 +55,13 @@
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
 
-    <framework src="Firebase/Performance" type="podspec" spec="~> 7.0.0"/>
+    <podspec>
+        <config>
+            <source url="https://cdn.cocoapods.org/" />
+        </config>
+        <pods>
+            <pod name="Firebase/Performance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" />
+        </pods>
+    </podspec>
   </platform>
 </plugin>

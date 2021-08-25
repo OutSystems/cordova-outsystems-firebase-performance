@@ -8,6 +8,9 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## 2021-08-24
+- Updated Firebase plugin versions to 8.6.0 on iOS and 20.0.+ on Android [RMET-732](https://outsystemsrd.atlassian.net/browse/RMET-732)
+
 ## [1.0.1]
 
 ## 2021-07-22
