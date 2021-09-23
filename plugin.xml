@@ -62,6 +62,6 @@
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
 
-    <framework src="Firebase/Performance" type="podspec" spec="~> 7.0.0"/>
+    <framework src="Firebase/Performance" type="podspec" spec="~> 8.6.0"/>
   </platform>
 </plugin>
