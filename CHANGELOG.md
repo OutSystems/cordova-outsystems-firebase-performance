@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## [1.0.3]
+## 2022-04-19
+- Hook to add google services dependency to build.gradle. [RMET-1497](https://outsystemsrd.atlassian.net/browse/RMET-1497)
+
 ## [1.0.2]
 
 ## 2021-11-05
