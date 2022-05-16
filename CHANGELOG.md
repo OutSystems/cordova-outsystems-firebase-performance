@@ -8,6 +8,7 @@ The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
 
+## [1.0.4]
 ### 2021-05-16
 - Update dependency to firebase-core to have error message improved (https://outsystemsrd.atlassian.net/browse/RMET-1538)
 
