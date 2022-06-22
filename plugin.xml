@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<plugin id="com.outsystems.plugins.firebaseperformance" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.outsystems.plugins.firebaseperformance" version="1.0.5" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   
   <name>OSFirebasePerformance</name>
   <description>Plugin to support firebase performance monitoring</description>
@@ -40,6 +40,8 @@
   
   <platform name="ios">
 
+    <hook type="after_plugin_add" src="hooks/ios/add_swift_support.js"/>
+
     <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.6.0"/>
 
     <config-file parent="/*" target="config.xml">
@@ -48,8 +50,6 @@
         <param name="onload" value="$PERFORMANCE_MONITORING_ENABLED" />
       </feature>
     </config-file>
-    <!--<dependency url="https://github.com/agoncalvesos/cordova-plugin-add-swift-support" commit="513e43f94ae94ad609d49f24e7dca23a4c358095" id="cordova-plugin-add-swift-support"/>-->
-    <dependency url="https://github.com/agoncalvesos/cordova-plugin-add-swift-support" id="cordova-plugin-add-swift-support"/>
 
      <config-file target="*-Info.plist" parent="FIREBASE_PERFORMANCE_COLLECTION_ENABLED">
             <string>$PERFORMANCE_MONITORING_ENABLED</string>
