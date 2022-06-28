@@ -53,7 +53,7 @@
             <string>$PERFORMANCE_MONITORING_ENABLED</string>
      </config-file>
 
-     <dependency id="cordova-plugin-add-swift-support" url="https://github.com/OutSystems/cordova-plugin-add-swift-support.git#call-swift-from-obj-c"/>
+     <dependency id="cordova-plugin-add-swift-support" url="https://github.com/OutSystems/cordova-plugin-add-swift-support.git#2.0.3-OS1"/>
 
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
