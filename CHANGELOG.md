@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## 2022-10-31
+- Replaced jcenter with more up to date mavenCentral
+
 ## [Unreleased]
 
 ### 2022-11-10
