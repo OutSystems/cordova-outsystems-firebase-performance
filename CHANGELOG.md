@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
+### Fixes
+- Update Firebase/Performance pod to version 8.15.0. (https://outsystemsrd.atlassian.net/browse/RMET-2858)
 
 ## [2.0.0]
 
@@ -24,6 +26,7 @@ The changes documented here do not include those from the original repository.
 ## [1.0.6]
 ### Fixes
 - Removed hook that adds swift support and added the plugin as dependecy. (https://outsystemsrd.atlassian.net/browse/RMET-1680)
+
 ## [1.0.5]
 ### 2022-06-22
 - Update 'add_swift_support' hook to the latest version.
