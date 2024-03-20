@@ -40,7 +40,7 @@
   
   <platform name="ios">
 
-    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="8.15.0"/>
+    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="10.23.0"/>
 
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
@@ -62,8 +62,8 @@
         <config>
             <source url="https://cdn.cocoapods.org/" />
         </config>
-        <pods>
-            <pod name="Firebase/Performance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" />
+        <pods use-frameworks="true">
+            <pod name="FirebasePerformance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" />
         </pods>
     </podspec>
   </platform>
