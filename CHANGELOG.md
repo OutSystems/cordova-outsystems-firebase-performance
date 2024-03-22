@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The changes documented here do not include those from the original repository.
 
 ## [Unreleased]
-### Fixes
-- Update Firebase/Performance pod to version 8.15.0. (https://outsystemsrd.atlassian.net/browse/RMET-2858)
+
+### Chores
+- Update `FirebasePerformance` iOS pod to version `10.23.0` (https://outsystemsrd.atlassian.net/browse/RMET-3274).
+- Update `Firebase/Performance` iOS pod to version `8.15.0` (https://outsystemsrd.atlassian.net/browse/RMET-2858).
 
 ## [2.0.0]
 
