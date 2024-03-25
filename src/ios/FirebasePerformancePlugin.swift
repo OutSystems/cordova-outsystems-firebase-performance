@@ -1,12 +1,4 @@
-//
-//  FirebasePerformancePlugin.swift
-//  Firebase Sample App
-//
-//  Created by Carlos Correa on 12/03/2021.
-//
-
-import Foundation
-import Firebase
+import FirebasePerformance
 
 class FirebasePerformancePlugin {
     var traces: [String: Trace] = [:]
