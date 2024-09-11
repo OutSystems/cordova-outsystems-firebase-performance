@@ -10,5 +10,10 @@ buildscript {
     }
 }
 
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation("com.google.firebase:firebase-perf")
+}
+
 //apply plugin: com.google.firebase.performance.buildtools.gradle.PerformancePlugin
 //apply plugin: 'com.google.firebase.firebase-perf'
