@@ -16,9 +16,6 @@ dependencies {
     implementation("com.google.firebase:firebase-perf")
 }
 
-//apply plugin: com.google.firebase.performance.buildtools.gradle.PerformancePlugin
-//apply plugin: 'com.google.firebase.firebase-perf'
-
 // use postBuildExtras to make sure the plugin is applied after
 // cdvPluginPostBuildExtras. Therefore if googleServices is added
 // to cdvPluginPostBuildExtras somewhere else, the plugin execution
