@@ -34,7 +34,6 @@
 
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
 
-    <framework src="com.google.firebase:firebase-perf:20.0.6" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
   </platform>
   

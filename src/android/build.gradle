@@ -5,10 +5,26 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-        classpath 'com.google.firebase:perf-plugin:1.3.5' 
+        classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.google.gms:google-services:4.3.14'
+        classpath 'com.google.firebase:perf-plugin:1.4.2'
     }
 }
 
-//apply plugin: com.google.firebase.performance.buildtools.gradle.PerformancePlugin
-//apply plugin: 'com.google.firebase.firebase-perf'
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation("com.google.firebase:firebase-perf")
+}
+
+// use postBuildExtras to make sure the plugin is applied after
+// cdvPluginPostBuildExtras. Therefore if googleServices is added
+// to cdvPluginPostBuildExtras somewhere else, the plugin execution
+// will be skipped and project build will be successfull
+ext.postBuildExtras = {
+    if (project.extensions.findByName('googleServices') == null) {
+        // apply plugin: 'com.google.gms.google-services'
+        // class must be used instead of id(string) to be able to apply plugin from non-root gradle file
+        apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
+        googleServices.disableVersionCheck = true
+    }
+}
