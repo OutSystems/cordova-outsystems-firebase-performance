@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<plugin id="com.outsystems.plugins.firebaseperformance" version="2.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.outsystems.plugins.firebaseperformance" version="2.1.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   
   <name>OSFirebasePerformance</name>
   <description>Plugin to support firebase performance monitoring</description>
@@ -34,7 +34,6 @@
 
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
 
-    <framework src="com.google.firebase:firebase-perf:20.0.6" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
   </platform>
   
