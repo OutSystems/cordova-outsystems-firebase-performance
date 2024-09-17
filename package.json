@@ -1,6 +1,6 @@
 {
   "name": "com.outsystems.plugins.firebaseperformance",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Plugin to support firebase performance monitoring",
   "keywords": [
     "ecosystem:cordova",
