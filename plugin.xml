@@ -46,13 +46,12 @@
         <param name="ios-package" value="OSFirebasePerformance"/>
         <param name="onload" value="$PERFORMANCE_MONITORING_ENABLED" />
       </feature>
+      <preference name="SwiftVersion" value="5" />
     </config-file>
 
-     <config-file target="*-Info.plist" parent="FIREBASE_PERFORMANCE_COLLECTION_ENABLED">
-            <string>$PERFORMANCE_MONITORING_ENABLED</string>
-     </config-file>
-
-     <dependency id="cordova-plugin-add-swift-support" url="https://github.com/OutSystems/cordova-plugin-add-swift-support.git#2.0.3-OS1"/>
+    <config-file target="*-Info.plist" parent="FIREBASE_PERFORMANCE_COLLECTION_ENABLED">
+      <string>$PERFORMANCE_MONITORING_ENABLED</string>
+    </config-file>
 
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
     <source-file src="src/ios/FirebasePerformancePlugin.swift"/>
