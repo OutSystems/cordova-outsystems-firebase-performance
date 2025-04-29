@@ -1,7 +1,13 @@
 import FirebasePerformance
+import FirebaseCore
 
 class FirebasePerformancePlugin {
     var traces: [String: Trace] = [:]
+    
+    func configureApp() {
+        guard FirebaseApp.app() == nil else { return }
+        FirebaseApp.configure()
+    }
     
     func starTrace(traceName: String){
         if !traceName.isEmpty {
