@@ -6,6 +6,7 @@ class OSFirebasePerformance : CDVPlugin {
     
     override func pluginInitialize() {
         plugin = FirebasePerformancePlugin()
+        plugin.configureApp()
     }
     
     @objc(startTrace:)
