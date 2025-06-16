@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
-## Unreleased
+## 2.2.0
 
 ### Fixes
 - (ios) Call `FirebaseApp.configure()` if necessary (https://outsystemsrd.atlassian.net/browse/RMET-3642).
