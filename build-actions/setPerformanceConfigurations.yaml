@@ -1,0 +1,13 @@
+platforms:
+  android:
+    manifest:
+      - file: AndroidManifest.xml
+        target: manifest/application
+        inject: |
+          <meta-data android:name="firebase_performance_collection_enabled" android:value="true" />
+
+  ios:
+    plist:
+       - replace: false
+         entries:
+            - FIREBASE_PERFORMANCE_COLLECTION_ENABLED: "true"
