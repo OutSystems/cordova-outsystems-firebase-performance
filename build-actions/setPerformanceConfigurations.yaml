@@ -10,4 +10,4 @@ platforms:
     plist:
        - replace: false
          entries:
-            - FIREBASE_PERFORMANCE_COLLECTION_ENABLED: "true"
+            - FIREBASE_PERFORMANCE_COLLECTION_ENABLED: true
