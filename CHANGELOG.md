@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## 2.2.1
+
+### Fixes
+- (ios) Fix boolean value on build action (https://outsystemsrd.atlassian.net/browse/RMET-4670).
+
 ## 2.2.0
 
 ### Fixes
