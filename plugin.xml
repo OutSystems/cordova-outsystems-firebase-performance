@@ -8,8 +8,6 @@
   <js-module name="OSFirebasePerformance" src="www/OSFirebasePerformance.js">
     <clobbers target="cordova.plugins.OSFirebasePerformance"/>
   </js-module>
-
-  <preference name="PERFORMANCE_MONITORING_ENABLED" default="true" />
   
   <platform name="android">
 
@@ -18,16 +16,11 @@
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="OSFirebasePerformance">
         <param name="android-package" value="com.outsystems.plugins.firebaseperformance.OSFirebasePerformance"/>
-        <param name="onload" value="$PERFORMANCE_MONITORING_ENABLED" />
       </feature>
     </config-file>
 
     <config-file parent="/*" target="AndroidManifest.xml">
       <uses-permission android:name="android.permission.INTERNET" />
-    </config-file>
-
-    <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <meta-data android:name="firebase_performance_collection_enabled" android:value="$PERFORMANCE_MONITORING_ENABLED" />
     </config-file>
 
     <source-file src="src/android/com/outsystems/plugins/firebaseperformance/OSFirebasePerformance.java" target-dir="src/com/outsystems/plugins/firebaseperformance"/>
@@ -42,13 +35,8 @@
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
         <param name="ios-package" value="OSFirebasePerformance"/>
-        <param name="onload" value="$PERFORMANCE_MONITORING_ENABLED" />
       </feature>
       <preference name="SwiftVersion" value="5" />
-    </config-file>
-
-    <config-file target="*-Info.plist" parent="FIREBASE_PERFORMANCE_COLLECTION_ENABLED">
-      <string>$PERFORMANCE_MONITORING_ENABLED</string>
     </config-file>
 
     <source-file src="src/ios/OSFirebasePerformance.swift"/>
