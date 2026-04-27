@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 The changes documented here do not include those from the original repository.
 
+## 2.3.0
+
+### Features
+- (ios): add Swift Package Manager support and bump `FirebasePerformance` to version `10.29.0` (https://outsystemsrd.atlassian.net/browse/RMET-5140).
+
 ## 2.2.2
 
 ### Chores
