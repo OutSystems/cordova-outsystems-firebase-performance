@@ -20,7 +20,6 @@ let package = Package(
                 .product(name: "Cordova", package: "cordova-ios"),
                 .product(name: "FirebasePerformance", package: "firebase-ios-sdk")
             ],
-            path: "src/ios",
-            publicHeadersPath: ".")
+            path: "src/ios")
     ]
 )
