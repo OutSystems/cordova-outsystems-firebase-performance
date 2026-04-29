@@ -15,3 +15,8 @@ xcuserdata
 !xcshareddata
 !xcschemes
 node_modules
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
