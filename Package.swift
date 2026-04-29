@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "cordova-outsystems-firebase-performance",
+    name: "com.outsystems.plugins.firebaseperformance",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "cordova-outsystems-firebase-performance",
-            targets: ["cordova-outsystems-firebase-performance"])
+            name: "com.outsystems.plugins.firebaseperformance",
+            targets: ["com.outsystems.plugins.firebaseperformance"])
     ],
     dependencies: [
         .package(url: "https://github.com/apache/cordova-ios.git", branch: "master"),
@@ -15,12 +15,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "cordova-outsystems-firebase-performance",
+            name: "com.outsystems.plugins.firebaseperformance",
             dependencies: [
                 .product(name: "Cordova", package: "cordova-ios"),
                 .product(name: "FirebasePerformance", package: "firebase-ios-sdk")
             ],
-            path: "src/ios"),
+            path: "src/ios",
             publicHeadersPath: ".")
     ]
 )
