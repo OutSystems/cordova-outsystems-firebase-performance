@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<plugin id="com.outsystems.plugins.firebaseperformance" version="2.2.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.outsystems.plugins.firebaseperformance" version="2.3.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   
   <name>OSFirebasePerformance</name>
   <description>Plugin to support firebase performance monitoring</description>
@@ -28,9 +28,9 @@
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
   </platform>
   
-  <platform name="ios">
+  <platform name="ios" package="swift">
 
-    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="10.23.0"/>
+    <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="10.29.0"/>
 
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
@@ -47,7 +47,7 @@
             <source url="https://cdn.cocoapods.org/" />
         </config>
         <pods use-frameworks="true">
-            <pod name="FirebasePerformance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" />
+            <pod name="FirebasePerformance" spec="$IOS_FIREBASE_PERFORMANCE_VERSION" nospm="true" />
         </pods>
     </podspec>
   </platform>
