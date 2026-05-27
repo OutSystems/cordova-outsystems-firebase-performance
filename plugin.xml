@@ -11,12 +11,11 @@
   
   <platform name="android">
 
-    <hook type="before_plugin_install" src="hooks/android/build_gradle_add_dependency.js" />
-
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="OSFirebasePerformance">
         <param name="android-package" value="com.outsystems.plugins.firebaseperformance.OSFirebasePerformance"/>
       </feature>
+      <preference name="GradlePluginGoogleServicesEnabled" value="true" />
     </config-file>
 
     <config-file parent="/*" target="AndroidManifest.xml">
