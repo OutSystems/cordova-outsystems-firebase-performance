@@ -15,7 +15,6 @@
       <feature name="OSFirebasePerformance">
         <param name="android-package" value="com.outsystems.plugins.firebaseperformance.OSFirebasePerformance"/>
       </feature>
-      <preference name="GradlePluginGoogleServicesEnabled" value="true" />
     </config-file>
 
     <config-file parent="/*" target="AndroidManifest.xml">

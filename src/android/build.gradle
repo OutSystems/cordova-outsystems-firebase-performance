@@ -6,6 +6,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.google.gms:google-services:4.3.14'
         classpath 'com.google.firebase:perf-plugin:1.4.2'
     }
 }
@@ -13,4 +14,11 @@ buildscript {
 dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.2.0')
     implementation("com.google.firebase:firebase-perf")
+}
+
+cdvPluginPostBuildExtras.add {
+    if (project.extensions.findByName('googleServices') == null) {
+        apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
+        googleServices.disableVersionCheck = true
+    }
 }
