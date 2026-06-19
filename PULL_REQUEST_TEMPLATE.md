@@ -26,6 +26,5 @@
 ## Checklist
 <!--- Go over all the following items and put an `x` in all the boxes that apply -->
 - [ ] Code follows code style of this project
-- [ ] CHANGELOG.md file is correctly updated
 - [ ] Changes require an update to the documentation
 	- [ ] Documentation has been updated accordingly
